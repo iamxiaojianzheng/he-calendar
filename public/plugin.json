@@ -1,5 +1,6 @@
 {
   "name": "@ruck-plugins/he-calendar",
+  "author": "jiahe",
   "displayName": "日历",
   "version": "1.0.3",
   "pluginType": "ui",
@@ -13,12 +14,7 @@
     {
       "code": "calendar",
       "explain": "日历 - 有温度的中国风日历🍵",
-      "cmds": [
-        "日历",
-        "万年历",
-        "黄历",
-        "calendar"
-      ]
+      "cmds": ["日历", "万年历", "黄历", "calendar"]
     }
   ]
 }
