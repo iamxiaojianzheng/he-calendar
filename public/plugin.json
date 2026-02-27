@@ -1,18 +1,18 @@
 {
-  "main": "index.html",
-  "preload": "preload/services.js",
+  "name": "@ruck-plugins/he-calendar",
+  "displayName": "日历",
+  "version": "1.0.3",
+  "pluginType": "ui",
+  "description": "有温度的中国风日历🍵",
+  "entry": "index.html",
   "logo": "logo.png",
   "development": {
     "main": "http://localhost:5173"
   },
-  "pluginSetting": {
-    "single": true,
-    "height": 600
-  },
   "features": [
     {
       "code": "calendar",
-      "explain": "合社日历 - 有温度的中国风日历🍵",
+      "explain": "日历 - 有温度的中国风日历🍵",
       "cmds": [
         "日历",
         "万年历",

@@ -4,13 +4,13 @@ import Calendar from './Calendar/index.vue'
 
 const route = ref('calendar')
 const enterAction = ref({})
-const isUtools = ref(false)
+const isRuck = ref(false)
 
 onMounted(() => {
-  if (window.utools) {
-    isUtools.value = true
-    document.body.classList.add('is-utools')
-    window.utools.onPluginEnter((action) => {
+  if (window.ruck) {
+    isRuck.value = true
+    document.body.classList.add('is-ruck')
+    window.ruck.onPluginEnter((action) => {
       route.value = action.code || 'calendar'
       enterAction.value = action
     })
@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app-container" :class="{ 'is-utools': isUtools }">
+  <div class="app-container" :class="{ 'is-ruck': isRuck }">
     <Calendar :enterAction="enterAction"></Calendar>
   </div>
 </template>
@@ -33,7 +33,7 @@ onMounted(() => {
 
 /* 响应式布局 - 大屏幕卡片化 */
 @media (min-width: 1024px) {
-  .app-container:not(.is-utools) {
+  .app-container:not(.is-ruck) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ onMounted(() => {
     box-sizing: border-box;
   }
   
-  .app-container:not(.is-utools) > * {
+  .app-container:not(.is-ruck) > * {
     max-width: 1200px;
     max-height: 800px;
     width: 100%;
@@ -54,7 +54,7 @@ onMounted(() => {
 
 /* 中等屏幕 */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .app-container:not(.is-utools) {
+  .app-container:not(.is-ruck) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@ onMounted(() => {
     box-sizing: border-box;
   }
   
-  .app-container:not(.is-utools) > * {
+  .app-container:not(.is-ruck) > * {
     max-width: 95%;
     max-height: 95%;
     border-radius: 12px;
